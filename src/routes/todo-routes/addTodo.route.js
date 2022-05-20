@@ -5,12 +5,12 @@ const router = express.Router();
 const addTodoController = async (req, res) => {
   let body = req.body;
   let user = await database.users.findOne({
-    username: req.user.dataValues.username,
+    username: body.username,
   });
+  console.log(user);
   if (user) {
-    let createdTodo = await database.posts.create({
+    let createdTodo = await database.todos.create({
       ...body,
-      username: req.user.dataValues.id,
     });
     if (createdTodo) {
       res.status(200).send("added");
