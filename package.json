@@ -11,5 +11,25 @@
     "sequelize": "^6.19.2",
     "sqlite3": "^5.0.8",
     "supertest": "^6.2.3"
-  }
+  },
+  "name": "todo-app-auth-api",
+  "description": "Performing actual HTTP requests with an authenticated API server for the todo app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "NODE_ENV=production node index.js ",
+    "test": "NODE_ENV=test jest --verbose --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karamalqinneh/todo-app-auth-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karamalqinneh/todo-app-auth-api/issues"
+  },
+  "homepage": "https://github.com/karamalqinneh/todo-app-auth-api#readme"
 }
