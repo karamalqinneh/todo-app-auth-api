@@ -12,7 +12,14 @@ const errorHandler = require("./middleware/error-handlers/500");
 const notFoundHandler = require("./middleware/error-handlers/404");
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  })
+);
 app.use(express.json());
 
 // Routers
